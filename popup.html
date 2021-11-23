@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        display: none;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body style="width: 300px">
+    <p style="text-align: center; margin-top: 20px">
+      <strong>Product:</strong>
+    </p>
+    <!-- <label class="switch">
+	  <input id="designed" type="checkbox">
+	  <span class="slider round"></span>
+	</label>
+	<p><strong>Hot Trend:</strong></p>
+	<label class="switch">
+	  <input id="trending" type="checkbox">
+	  <span class="slider round"></span>
+	</label> -->
+    <form style="margin: 15px 20px">
+      <!-- <div class="form-group">
+        <label>Category <span style="color: red">*</span>:</label>
+        <input type="text" class="form-control" id="category" />
+      </div> -->
+      <div class="form-group">
+        <label>Domain <span style="color: red">*</span>:</label>
+        <input type="text" class="form-control" id="domain" required />
+      </div>
+      <div class="form-group">
+        <label>Vender <span style="color: red">*</span>:</label>
+        <input type="text" class="form-control" id="vender" required />
+      </div>
+      <div class="form-group">
+        <label>Page <span style="color: red">*</span>:</label>
+        <input type="text" class="form-control" id="page" required />
+      </div>
+      <div class="form-group">
+        <label>Css_selector <span style="color: red">*</span>:</label>
+        <input type="text" class="form-control" id="css_selector" required />
+      </div>
+      <div class="form-group">
+        <label>Paybal <span style="color: red">*</span>:</label>
+        <input type="text" class="form-control" id="paybal" required />
+      </div>
+      <button
+        type="submit"
+        id="submitTool"
+        class="btn btn-primary"
+        style="margin: 0 auto; display: block"
+      >
+        Submit
+      </button>
+    </form>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="bootstrap-switch.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>

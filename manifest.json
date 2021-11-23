@@ -1,0 +1,27 @@
+{
+  "name": "Data Atok",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Get Product",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_menu": "Menu",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "jquery.js",
+        "js/ultils.js",
+        "js/function.js",
+        "popup.js",
+        "Sites/Teemokey/teemokey.js"
+      ]
+    }
+  ],
+  "permissions": ["tabs", "http://*/*", "activeTab", "storage"]
+}
